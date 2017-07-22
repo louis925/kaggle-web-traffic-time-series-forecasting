@@ -3,11 +3,14 @@ data/key_1.csv
 data/sample_submission_1.csv
 data/train_1.csv
 
+# Mathematica files
+*.nb
+
 # Zip files
 *.zip
 
 # Python 3 caches
-*/__pycache__
+__pycache__/
 
 # =========================
 # Operating System Files

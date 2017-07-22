@@ -11,7 +11,7 @@ print('Model 01 - Average')
 
 from read_data import read_data
 print('Reading data...', end = '')
-page, visit = read_data()
+dates, page, visit, key = read_data()
 print('done!')
 
 number_days = len(visit[0])
@@ -21,5 +21,3 @@ print('  Number of pages:', number_pages)
 print('  Number of days of data:', number_days)
 print('  visit[0]:', visit[0])
 print('  page[:5]', page[:5])
-
-visit[-5:]
