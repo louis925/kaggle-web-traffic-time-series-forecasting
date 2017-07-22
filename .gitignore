@@ -7,7 +7,7 @@ data/train_1.csv
 *.zip
 
 # Python 3 caches
-__pycache__/
+*/__pycache__
 
 # =========================
 # Operating System Files
