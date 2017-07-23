@@ -11,8 +11,8 @@ def read_data():
     visit = readin.values
     
     key = pd.read_csv('../data/key_1.csv', index_col = 0)
-    
-    return dates, page, visit, key
+    predict_dates = find_predict_date(key)
+    return dates, page, visit, key, predict_dates
 
 # Plot the ith visit data
 def plot_visit(i, visit, page):
@@ -39,13 +39,28 @@ def plot_some_visit(visit, page, yscale = 'linear'):
     plt.tight_layout()
     plt.show()
     
-def output_result(page, dates, result, key):
+def output_result(page, result, key, predict_dates):
+    page_dates = key.index.values # the np.array of page_dates strings
+    page_index = pd.Index(page)   # create panda.Index() from page array
+    predic_dates_index = pd.Index(predict_dates) # create panda.Index() from predict_dates array
+    n_out_page_dates = len(page_dates)
+    with open('../results/submit_1.csv', mode = 'w', buffering = 131072) as out_f:
+        print('Id,Visits', file = out_f)
+        for i in range(n_out_page_dates):
+            page_i = page_index.get_loc(page_dates[i][:-11])
+            date_i = predic_dates_index.get_loc(page_dates[i][-10:])
+            print(key.values[i][0], result[page_i][date_i], sep=',', file = out_f)
     return
 
 def find_predict_date(key):
+    '''
+    Return list of dates that we need to predict their traffic
+    '''
     page_dates = key.index.values
-    first_page_name = '_'.join(page_dates[0].split('_')[:-1])
-    return
+    # Assuming each page_dates item has the form 'pagename_YYYY-MM-DD'
+    first_page_name = page_dates[0][:-11] # Remove the date from first page_dates entry
+    predict_dates = np.array([x[-10:] for x in page_dates if first_page_name in x])
+    return predict_dates
 
 #2129280
 def read_test():

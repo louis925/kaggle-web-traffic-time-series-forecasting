@@ -11,8 +11,8 @@ print('Model 01 - Average')
 
 import numpy as np
 import data_processing as dp
-print('Reading data...', end = '')
-dates, page, visit, key = dp.read_data()
+print('%%% Reading data...', end = '')
+dates, page, visit, key, predict_dates = dp.read_data()
 print('done!')
 
 number_days = len(visit[0])
@@ -25,4 +25,12 @@ print('  page[:5]', page[:5])
 print('  Plot a few data:')
 dp.plot_some_visit(visit, page)
 
-visit_mean = np.nan_to_num(np.nanmean(visit, axis = 1))
+number_predict_days = len(predict_dates)
+visit_mean = np.around(np.nan_to_num(np.nanmean(visit, axis = 1))).astype(int)
+
+result = np.repeat(np.array([visit_mean]).transpose(), number_predict_days, 
+                   axis = 1)
+
+print('%%% Writing result...', end = '')
+dp.output_result(page, result, key, predict_dates)
+print('done!')
