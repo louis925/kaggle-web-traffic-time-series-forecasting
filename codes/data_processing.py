@@ -5,12 +5,12 @@ import pandas as pd
 
 # Importing the dataset
 def read_data():
-    readin = pd.read_csv('../data/train_1.csv')
-    dates = readin.columns.values[1:]
-    page = readin.iloc[:,0].values
-    visit = readin.iloc[:,1:].values
+    readin = pd.read_csv('../data/train_1.csv', index_col = 0)
+    dates = readin.columns.values
+    page = readin.index.values
+    visit = readin.values
     
-    key = pd.read_csv('../data/key_1.csv').values
+    key = pd.read_csv('../data/key_1.csv', index_col = 0)
     
     return dates, page, visit, key
 
@@ -38,3 +38,26 @@ def plot_some_visit(visit, page, yscale = 'linear'):
         plt.plot(visit[plot_i[i]])
     plt.tight_layout()
     plt.show()
+    
+def output_result(page, dates, result, key):
+    return
+
+def find_predict_date(key):
+    page_dates = key.index.values
+    first_page_name = '_'.join(page_dates[0].split('_')[:-1])
+    return
+
+#2129280
+def read_test():
+    return pd.read_csv('../data/key_1.csv')
+
+#2128964
+def read_test2():
+    readin = pd.read_csv('../data/key_1.csv')
+    return readin.values
+
+#2128512
+def read_test3():
+    return pd.read_csv('../data/key_1.csv').values
+
+

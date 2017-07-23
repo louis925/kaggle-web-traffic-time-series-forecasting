@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import matplotlib.pyplot as plt
 
-import read_data as rd
+import data_processing as dp
 
 print('Reading data...', end = '')
-dates, page, visit, key = rd.read_data()
+dates, page, visit, key = dp.read_data()
 print('done!')
 
 n_days = len(visit[0])
@@ -59,7 +59,7 @@ print("The first 5 page_dates and keys:\n", key[:5])
 print("The first 5 dates in data:", dates[:5])
 print("The last 5 dates in data:", dates[-5:])
 
-rd.plot_visit(0, visit, page)
-rd.plot_visit(32000, visit, page)
-rd.plot_visit(21120, visit, page)
-rd.plot_some_visit(visit, page)
+dp.plot_visit(0, visit, page)
+dp.plot_visit(32000, visit, page)
+dp.plot_visit(21120, visit, page)
+dp.plot_some_visit(visit, page)
