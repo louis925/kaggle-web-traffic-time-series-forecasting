@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import data_processing as dp
 
 print('Reading data...', end = '')
-dates, page, visit, key, predict_dates = dp.read_data()
+dates, page, visit, key, predict_dates, readin = dp.read_data()
 print('done!')
 
 n_days = len(visit[0])

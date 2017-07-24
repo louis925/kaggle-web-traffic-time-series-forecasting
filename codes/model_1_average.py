@@ -7,12 +7,13 @@ Created on Fri Jul 21 16:40:32 2017
 print('')
 print('Kaggle - Web Traffic Time Series Forecasting')
 print('         by Sky Huang and Louis Yang')
+model_name = 'model_01_average'
 print('Model 01 - Average')
 
 import numpy as np
 import data_processing as dp
 print('%%% Reading data...', end = '')
-dates, page, visit, key, predict_dates = dp.read_data()
+dates, page, visit, key, predict_dates, readin = dp.read_data()
 print('done!')
 
 number_days = len(visit[0])
@@ -32,5 +33,5 @@ result = np.repeat(np.array([visit_mean]).transpose(), number_predict_days,
                    axis = 1)
 
 print('%%% Writing result...', end = '')
-dp.output_result(page, result, key, predict_dates)
+dp.output_result(page, result, key, predict_dates, 'submit_1_' + model_name)
 print('done!')
