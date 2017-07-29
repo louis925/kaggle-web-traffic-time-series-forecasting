@@ -4,8 +4,12 @@ data/sample_submission_1.csv
 data/train_1.csv
 results/
 
+# Data files
+*.csv
+
 # Mathematica files
 *.nb
+*.mx
 
 # Zip files
 *.zip

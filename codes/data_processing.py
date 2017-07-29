@@ -44,8 +44,7 @@ def output_result(page, result, key, predict_dates, output_filename = 'submit_1'
     page_index = pd.Index(page)   # create panda.Index() from page array
     predic_dates_index = pd.Index(predict_dates) # create panda.Index() from predict_dates array
     n_out_page_dates = len(page_dates) # total number of output entry
-    with open('../results/' + output_filename + '.csv', mode = 'w',
-              buffering = 64*1024) as out_f:
+    with open('../results/' + output_filename + '.csv', mode = 'w') as out_f:#,buffering = 64*1024
         print('Id,Visits', file = out_f)
         for i in range(n_out_page_dates):
             page_i = page_index.get_loc(page_dates[i][:-11])
@@ -72,8 +71,8 @@ def output_result2(page, result, key, predict_dates, output_filename = 'submit_1
     result_df = pd.DataFrame(result, index = page_index, 
                              columns = predic_dates_index) # DataFrame of result
     n_out_page_dates = len(page_dates) # total number of output entry
-    with open('../results/' + output_filename + '.csv', mode = 'w',
-              buffering = 64*1024) as out_f:
+    with open('../results/' + output_filename + '.csv', mode = 'w'""",
+              buffering = 64*1024""") as out_f:
         print('Id,Visits', file = out_f)
         for i in range(n_out_page_dates):
             print(key.values[i][0], 
