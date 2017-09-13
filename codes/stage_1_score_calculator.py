@@ -2,7 +2,7 @@
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 
-submission_file = 'submit_1_model_7_CNN_with_Fibonacci_6_Wider_3_conv_120_Averagepool-Prediction.csv'
+submission_file = 'submit_1_model_10_Modified_CNN_4_The_Model_1_stage_1_predict.csv'
 
 correct_file = 'submit_1_stage_1_correct.csv'
 

@@ -1,1 +1,3 @@
-Please download and unzip the key_1.csv and train_1.csv from the Kaggle Web Traffic Time Series Forecasting contest.
+Please download and unzip the key_1.csv, train_1.csv (stage 1) and key_2.cav, train_2.csv (stage 2) from the Kaggle Web Traffic Time Series Forecasting contest. 
+
+In the codes, the "train_2.csv" refer to the first stage 2 data (the version of train_2.csv released earlier), which contains data only upto 2017/8/31. The "train_3.csv" is the final stage 2 data (also named "train_2.csv" on Kaggle), which contains all data upto 2017/9/10.
