@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# This script samples the training data (train_1.csv) to reduce the size
 
 #import numpy as np
 import pandas as pd
