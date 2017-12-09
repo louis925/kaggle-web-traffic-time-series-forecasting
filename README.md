@@ -4,6 +4,7 @@ This repository contains the codes to solve the Kaggle competition "Web traffic 
 
 ### Contributors ###
 Louis Yang (github.com/louis925)
+
 Chen-Hsi (Sky) Huang (github.com/skyhuang1208)   
 
 ### Achievement ###
