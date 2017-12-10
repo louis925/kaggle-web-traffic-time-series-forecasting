@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# Useful functions used by main codes
+
 import numpy as np
 import matplotlib.pyplot as plt
 

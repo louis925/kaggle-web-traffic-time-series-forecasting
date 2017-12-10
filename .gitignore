@@ -5,6 +5,7 @@ data/train_1.csv
 results/
 models/
 .ipynb_checkpoints/
+working_codes/
 
 # Keras Model files
 *.h5
