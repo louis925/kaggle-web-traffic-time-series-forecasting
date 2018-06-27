@@ -3,9 +3,9 @@
 This repository contains the codes to solve the Kaggle competition "Web traffic time series forecasting" (https://www.kaggle.com/c/web-traffic-time-series-forecasting).
 
 ### Contributors ###
-Louis Yang (github.com/louis925)
+Louis Yang ([github.com/louis925](http://github.com/louis925))
 
-Chen-Hsi (Sky) Huang (github.com/skyhuang1208)   
+Chen-Hsi (Sky) Huang ([github.com/skyhuang1208](http://github.com/skyhuang1208))   
 
 ### Achievement ###
 11th place out of 1095 teams (Gold medal, top 2%) on stage 2 private leaderboard with SMAPE score 37.919.
